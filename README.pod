@@ -1,0 +1,142 @@
+=pod
+
+=for nobody_in_particular
+ 
+ POD > JavaDoc. Just saying.
+
+=head1 Commands
+
+ Commands is a mod for minecraft, built using the MinecraftForge API.
+ 
+=head2 The actual commands it provides
+
+ Commands provides lots of commands:
+
+=over 4
+
+=item B</back>
+
+ Can be found as keepcalm.mods.sCommands.Commands.CommandBack
+ Go back to your previous location.
+ When you use it, it sets the location you were at WHEN you typed /back
+ to your location. So /back twice results in you being at the same spot.
+ Not dimension-sensitive at present.
+
+=item B</gentree>
+
+ Can be found at keepcalm.mods.sCommands.Commands.CommandBigTree
+ Puts a tree where you're standing. And moves you a block along the X axis.
+
+=item B</burn PLAYER>
+
+ Burn player for 5 seconds.
+
+=item B</deop>
+
+ Registered in single player only. Lets you switch cheats off.
+
+=item B</fireball>
+
+ Shoots a fireball, in the OPPOSITE direction to the way you're facing.
+ That's not deliberate, I'm not sure why it does that
+
+=item B</fly>
+
+ Lets you fly/not fly
+
+=item B</setjail JAILNAME>
+
+ Make where you're standing a jail called JAILNAME. Dimension-sensitive
+
+=item B</unjail CRIMINAL>
+
+ Remove criminal from jail. Sends them back to where they were
+ (dimension-sensitive)
+
+=item B</jail JAILNAME PLAYER>
+
+ Send PLAYER to JAILNAME. Unfortunately, they can break blocks for some reason
+ I'm trying to work out why. You'll be glad to know that they can't place
+ blocks, though.
+ Jailed players might be persistent over login/logout, I'm not sure.
+
+=item B</listjails>
+
+ Shows you all the jails you have available.
+
+=item B</deljail JAILNAME>
+
+ Removes JAILNAME from jail list.
+
+=item B</jump>
+
+ Jump to where you're pointing. Has a limit of 128 blocks, and
+ if you aim below the horizon, you'll only move forwards a block.
+
+=item B</mute PLAYER>
+
+ Mute PLAYER. Will only fully disappear on clients with Commands installed.
+ Due to the order in which Forge handles Chat packets, the mod gets the
+ message before the server puts <PlayerName> on them, so clients without
+ Commands will end up with a bunch of empty <PlayerName> messages.
+
+=item B</op PLAYER>
+ 
+ Op a player - intended for use in SP, to turn cheats on.
+
+=item B</ping>
+ 
+ Says pong to you.
+
+=item B</powercontrol add|remove PLAYER>
+
+ Alternate method of OPping people, but only works with Commands commands.
+
+=item B</strike>
+
+ Make lightning where you're looking. Has the same drawbacks as B</jump>.
+
+=item B</tpyes>
+
+ Accept a pending TPA request
+
+=item B</tpa PLAYER I<OR> /tpa PLAYER X Y Z I<OR> /tpa PLAYER1 PLAYER2>
+
+ Teleport either (a) you to a player, (b) player to XYZ or player1 to player2.
+ For variations A and B, PLAYER must accept, and for variation C,
+ both players must accept.
+
+=item B</tpno>
+ 
+ Deny a pending TPA request
+ 
+=item B</whoami>
+
+ Tells you who you are. Useful in eclipse.
+
+
+=back
+
+=head3 "But what about those other files?"
+
+ The ones in keepcalm.mods.sCommands.Commands that aren't mentioned either
+ don't work the way they're meant to or are just for testing things,
+ and the ones in keepcalm.mods.sCommands.Commands.Dimension are things I'm
+ experimenting with.
+
+=head1 BUGS
+
+ Not that there ARE any, but if you find some, either say something here or
+ on minecraftforum.net. Good luck finding the topic ;).
+
+ Just bewarned: I need a crash log, and go and look at 
+ http://www.minecraftforge.net/forum/index.php/topic,2429.0.html
+ You may find it useful, if your error is one of those there, then
+ don't tell me...
+
+=head1 LICENSE
+
+ This mod is licensed under the Minecraft Mod Public License version 1.0.1
+ (the difference between 1.0.1 and 1.0 is I fixed the spelling mistake, under
+ 5. Derivation rights. The license may be found in this repository, as 
+ MMPL-1.0.1.txt.
