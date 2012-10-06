@@ -1,0 +1,17 @@
+[
+{
+  "modid": "keepcalm-Commands",
+  "name": "Commands",
+  "description": "More (and better) commands for singleplayer and multiplayer",
+  "version": "1.3.2-0",
+  "mcversion": "1.3.2",
+  "logoFile": "",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["KeepCalm"],
+  "credits": "Created by KeepCalm.",
+  "parent": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
