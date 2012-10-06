@@ -1,9 +1,5 @@
 =pod
 
-=for nobody_in_particular
- 
- POD > JavaDoc. Just saying.
-
 =head1 Commands
 
  Commands is a mod for minecraft, built using the MinecraftForge API.
